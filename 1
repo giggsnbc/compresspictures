@@ -1,0 +1,13 @@
+from PIL import Image
+nam = input("请输入图片：")
+im = Image.open('C:\\Users\\Administrator\\Desktop\\' + nam + '.jpg')
+print(im.format, im.size, im.mode)
+
+wth = int(input("请输入宽度："))
+lth = int(input("请输入长度："))
+im.thumbnail((wth, lth))
+name = input("请输入名字：")
+
+im.save(name + '.jpg', 'JPEG')
+print(im.format, im.size, im.mode)
+im.show()
